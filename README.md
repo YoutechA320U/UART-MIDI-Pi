@@ -4,13 +4,11 @@ RaspberryPi Python2.7用シリアル-MIDI変換プログラム
 ## 概要
 このプログラムは、RaspberryPiのUARTでMIDIメッセージをやり取りします。現在は入力のみです。GM/GS/XG、その他エクスクルーシブに対応します。
 
-## 必須ライブラリ
-　　 pyserial　python-rtmidi　argparse
-
 ## 開発環境
     OS : Raspbian　stretch
     RaspberryPi : RaspberryPi ZeroWH,RaspberryPi 3B+
     Python : ver2.7
+    library :  pyserial,　python-rtmidi,　argparse
 
 ## 使い方
 できるだけ優先度を上げて実行してください。実行すると"SerialMIDI"という仮想MIDI出力ポートが作成されます。これを他のMIDI入力ポートにつないでください。-d オプション付けて実行すると、出力がコンソールに表示されます。
