@@ -17,11 +17,14 @@ RaspberryPi Python2.7用シリアル-MIDI変換プログラム
 
 -d オプション付けて実行すると、出力がコンソールに表示されます。
 
+## 備考
+一度に大量のMIDIメッセージを受信すると処理落ちするので気をつけて下さい。
+
 ### 参考コード・資料
  * <http://www.samplerbox.org/article/midiinwithrpi>  
  * <https://docs.python.org/ja/2.7/library/functions.html>
  * <https://qiita.com/unchainendo/items/1ea305d87c797ba02450>  
  * <https://github.com/SpotlightKid/python-rtmidi>  
 
-## 履歴 / History
+## 履歴
     [2018/08/16] - 初回リリース
