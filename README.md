@@ -1,3 +1,4 @@
+## UART-MIDI-Pi
 RaspberryPi Python2.7用シリアル-MIDI変換プログラム
 
 ## 概要
@@ -12,7 +13,7 @@ RaspberryPi Python2.7用シリアル-MIDI変換プログラム
     Python : ver2.7
 
 ## 使い方
-できるだけ優先度を上げて実行してください。実行すると"SerialMIDI"という仮想MIDI出力ポートが作成されます。これを他のMIDI入力ポートにつないでください。-dオプション付けて実行すると、出力がコンソールに表示されます。
+できるだけ優先度を上げて実行してください。実行すると"SerialMIDI"という仮想MIDI出力ポートが作成されます。これを他のMIDI入力ポートにつないでください。-d オプション付けて実行すると、出力がコンソールに表示されます。
 
 ### 参考コード・資料
  * <http://www.samplerbox.org/article/midiinwithrpi>  
