@@ -11,7 +11,7 @@ RaspberryPi Python2.7用シリアル-MIDI変換プログラム
     library :  pyserial,　python-rtmidi,　argparse
 
 ## 使い方
-予めここ< http://www.samplerbox.org/article/midiinwithrpi >を参考にRaspberryPiのUARTを有効にしてボーレートを31250bpsに設定してください。
+予めここ<http://www.samplerbox.org/article/midiinwithrpi>を参考にRaspberryPiのUARTを有効にしてボーレートを31250bpsに設定してください。
 
 実行する時はできるだけ優先度を上げてください。ただし、FluidsythやTimidity等のソフトウェアシンセサイザーとこのプログラムを使う場合、それらよりも優先度を上げるとシンセサイザーが処理落ちするので上手く調整してください。
 
