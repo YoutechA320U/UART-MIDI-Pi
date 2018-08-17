@@ -25,7 +25,7 @@ while True:
   if data1 == 247:
       midiout.send_message([data1])
       if args.debug:
-           print ('[{}]'.format(data1))
+         print ('[{}]'.format(data1))
       else:
         pass
       continue
@@ -34,7 +34,7 @@ while True:
       if data1 >= 192 and data1 <= 208 or data2 == 247:
          midiout.send_message([data1,data2])
          if args.debug:
-           print ('[{}, {}]'.format(data1, data2))
+            print ('[{}, {}]'.format(data1, data2))
          else :
            pass
          continue
@@ -42,7 +42,7 @@ while True:
          data3 = ord(ser.read(1)) #3バイト目
          midiout.send_message([data1,data2,data3])
          if args.debug:
-           print ('[{}, {}, {}]'.format(data1, data2, data3)) 
+            print ('[{}, {}, {}]'.format(data1, data2, data3)) 
          else :
            pass
          continue        
