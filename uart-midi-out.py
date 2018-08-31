@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+# 必須ライブラリ pyerial, python-rtmidi
 import time
 import rtmidi
 import serial
