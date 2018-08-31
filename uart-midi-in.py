@@ -18,7 +18,7 @@ args = parser.parse_args()
 
 # MIDIポート設定
 midiout = rtmidi.MidiOut()
-midiout.open_virtual_port("SerialMIDI") # 仮想MIDIポートの名前
+midiout.open_virtual_port("UART_MIDI_IN") # 仮想MIDIポートの名前
 ser = serial.Serial('/dev/ttyAMA0', baudrate=38400) #シリアル読み取り, ボーレート38400bps
 while True:
   data1 = ord(ser.read(1)) #1バイト目
