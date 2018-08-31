@@ -2,7 +2,7 @@
 RaspberryPi Python2.7用シリアル-MIDI変換プログラム
 
 ## 概要
-このプログラムは、RaspberryPiのUARTでMIDIメッセージをやり取りします。入力と出力に対応しています。GM/GS/XG、その他エクスクルーシブに対応します。
+このプログラムは、RaspberryPiのUARTでMIDIメッセージをやり取りします。入力はGM/GS/XG、その他エクスクルーシブに対応します。出力は現状３バイトのメッセージまで対応しています。
 
 ## 開発環境
     OS : Raspbian　stretch
