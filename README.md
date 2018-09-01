@@ -1,7 +1,7 @@
 ## UART-MIDI-Pi
 RaspberryPi Python2.7用シリアル-MIDI変換プログラム
 
-uart-midi-out.pyはまだ正常に動作しないので、実行しないで下さい
+※※重要※※ uart-midi-out.pyはまだ正常に動作しないので、実行しないで下さい
 
 ## 概要
 このプログラムは、RaspberryPiのUARTでMIDIメッセージをやり取りします。入力はGM/GS/XG、その他エクスクルーシブに対応します。
