@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-# 必須ライブラリ pyerial, python-rtmidi
 import time
 import rtmidi
 import serial
@@ -17,29 +16,21 @@ parser.add_argument('-d', '--debug', help='show midi message',
 # 引数を解析する
 args = parser.parse_args()
 
-
+# MIDIポート設定
 midiin = rtmidi.MidiIn()
 midiin.open_virtual_port("UART_MIDI_OUT") # 仮想MIDIポートの名前
 ser = serial.Serial('/dev/ttyAMA0', baudrate=38400) #シリアル読み取り, ボーレート38400bps
-
+midiin.ignore_types(sysex=False, timing=True, active_sense=True)
 timer = time.time()
 while True:
-  msg = midiin.get_message()
-  if msg:
-     message, deltatime = msg
-     timer += deltatime
-     try:
-        data1 = message[0]
-        data2 = message[1]
-        data3 = message[2]
-        ser.write(chr(data1))
-        ser.write(chr(data2))
-        ser.write(chr(data3))
-        if args.debug:
-           print ('[{}, {}, {}]'.format(data1,data2,data3))
-     except:
-        ser.write(chr(data1))
-        ser.write(chr(data2))
-        if args.debug: 
-           print ('[{}, {}]'.format(data1,data2))
-     continue
+      msg = midiin.get_message()
+      if msg:
+         message, deltatime = msg
+         timer += deltatime
+         if args.debug:
+            print (message)
+         else :
+           pass
+         outmidi = [chr(i) for i in message]
+         ser.write(outmidi)
+         continue

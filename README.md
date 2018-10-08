@@ -1,10 +1,8 @@
 ## UART-MIDI-Pi
 RaspberryPi Python2.7用シリアル-MIDI変換プログラム
 
-※※重要※※ uart-midi-out.pyはまだ正常に動作しないので、実行しないで下さい
-
 ## 概要
-このプログラムは、RaspberryPiのUARTでMIDIメッセージをやり取りします。入力はGM/GS/XG、その他エクスクルーシブに対応します。
+このプログラムは、RaspberryPiのUARTでMIDIメッセージをやり取りします。入力、出力共にGM/GS/XG、その他エクスクルーシブに対応します。
 
 ## 開発環境
     OS : Raspbian　stretch
@@ -15,16 +13,18 @@ RaspberryPi Python2.7用シリアル-MIDI変換プログラム
     pyserial,　python-rtmidi,　argparse
 
 ## 使い方
-予めここ<http://www.samplerbox.org/article/midiinwithrpi>を参考にRaspberryPiのUARTを有効にしてボーレートを31250bpsに設定してください。また、適当なシリアル-MIDI回路をRaspberryPiに取り付けてください。
+予めここ<http://www.samplerbox.org/article/midiinwithrpi>を参考にRaspberryPiのUARTを有効にしてボーレートを31250bpsに設定してください。また、このような(※画像は一例です)シリアル-MIDI回路をRaspberryPiに取り付けてください。
 
-入力はuart-midi_in.pyです。実行する時はできるだけ優先度を上げてください。ただし、FluidsythやTimidity等のソフトウェアシンセサイザーとこのプログラムを使う場合、それらよりも優先度を上げるとシンセサイザーが処理落ちするので上手く調整してください。
+![SS](https://github.com/YoutechA320U/UART-MIDI-Pi/UART-MIDI.png "SS")
 
-実行すると入力は"UART_MIDI_IN"という仮想MIDI出力ポートが作成されます。これを他のMIDIポートに繋いでください。
+入力はuart-midi_in.py、出力はuart-midi_out.pyです。実行する時はできるだけ優先度を上げてください。ただし、FluidsythやTimidity等のソフトウェアシンセサイザーとこのプログラムを使う場合、それらよりも優先度を上げるとシンセサイザーが処理落ちするので上手く調整してください。
 
-それぞれpython *.py -dと-dオプション付けて実行すると、入出力がコンソールに表示されます。
+実行すると入力は"UART_MIDI_IN"、出力は"UART_MIDI_OUT"という仮想MIDI出力ポートが作成されます。これを他のMIDIポートに繋いでください。
+
+それぞれ実行時に拡張子の後ろに -dと引数を付けて実行すると、入出力がコンソールに表示されます。
 
 ## 備考
-一度に大量のMIDIメッセージを受信すると処理落ちするので気をつけて下さい。また -d オプションを付けて実行すると出力をコンソールに表示する分処理が重くなります。
+一度に大量のMIDIメッセージを受信すると処理落ちするので気をつけて下さい。また -d オプションを付けて実行すると入出力をコンソールに表示するので処理が重くなります。
 
 ### 参考コード・資料
  * <http://www.samplerbox.org/article/midiinwithrpi>  
@@ -35,5 +35,5 @@ RaspberryPi Python2.7用シリアル-MIDI変換プログラム
 ## 履歴
     [2018/08/16] - 初回リリース
     [2018/08/18] - 余計なループ・変数を省いて高速化
-    [2018/08/31] – 出力にも対応
-    [2018/09/01] – 出力にも対応を取り下げ
+    [2018/08/31] – 2018/09/01に取り下げました
+    [2018/09/01] – 出力に対応
