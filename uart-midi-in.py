@@ -42,7 +42,7 @@ while True:
          data3 = ord(ser.read(1)) #3バイト目
          midiout.send_message([data1,data2,data3])
          if args.debug:
-            print ('[{}, {}, {}]'.format(data1, data2, data3)) 
+            print ('[{}, {}, {}]'.format(data1, data2, data3))
          else :
            pass
-         continue        
+         continue

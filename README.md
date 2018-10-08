@@ -13,7 +13,7 @@ RaspberryPi Python2.7用シリアル-MIDI変換プログラム
     pyserial,　python-rtmidi,　argparse
 
 ## 使い方
-予めここ<http://www.samplerbox.org/article/midiinwithrpi>を参考にRaspberryPiのUARTを有効にしてボーレートを31250bpsに設定してください。また、このような(※画像は一例です)シリアル-MIDI回路をRaspberryPiに取り付けてください。
+予めここ<http://www.samplerbox.org/article/midiinwithrpi>を参考にRaspberryPiのUARTを有効にしてボーレートを31250bpsに設定してください。また、このような(※画像は一例です)UART-MIDI変換回路をRaspberryPiに取り付けてください。
 
 ![SS](https://github.com/YoutechA320U/UART-MIDI-Pi/blob/master/UART-MIDI.png "SS")
 
