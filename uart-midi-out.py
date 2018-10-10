@@ -20,7 +20,7 @@ args = parser.parse_args()
 midiin = rtmidi.MidiIn()
 midiin.open_virtual_port("UART_MIDI_OUT") # 仮想MIDIポートの名前
 ser = serial.Serial('/dev/ttyAMA0', baudrate=38400) #シリアル読み取り, ボーレート38400bps
-midiin.ignore_types(sysex=False, timing=False, active_sense=False)
+midiin.ignore_types(sysex=False, timing=True, active_sense=True)
 timer = time.time()
 while True:
       msg = midiin.get_message()
