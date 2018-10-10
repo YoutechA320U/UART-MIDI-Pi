@@ -4,7 +4,7 @@ RaspberryPi Python2.7用(Python3では確認していないです)シリアル-M
 ## 概要
 このプログラムは、RaspberryPiのUARTでMIDIメッセージをやり取りします。入力、出力共にGM/GS/XG、その他エクスクルーシブメッセージに対応します。
 
-RaspberryPiZeroでOTG-MIDIとMIDIを併用する事が出来るようになります。
+RaspberryPiZeroで使用するとOTG-MIDIとMIDIを併用する事が出来るようになります。
 
 ## 開発環境
     OS : Raspbian　stretch
@@ -17,7 +17,7 @@ RaspberryPiZeroでOTG-MIDIとMIDIを併用する事が出来るようになり�
 ## 使い方
 予めここ<http://www.samplerbox.org/article/midiinwithrpi>を参考にRaspberryPiのUARTを有効にしてボーレートを31250bpsに設定してください。また、このような(※画像は一例です)UART-MIDI変換回路をRaspberryPiに取り付けてください。
 
-![SS](https://github.com/YoutechA320U/UART-MIDI-Pi/blob/master/UART-MIDI.png "SS")
+![SS](https://github.com/YoutechA320U/UART-MIDI-Pi/blob/master/UART-MIDI.png "UART-MIDI_example")
 
 入力はuart-midi_in.py、出力はuart-midi_out.pyです。実行する時はできるだけ優先度を上げてください。ただし、FluidsythやTimidity等のソフトウェアシンセサイザーとこのプログラムを使う場合、それらよりも優先度を上げるとシンセサイザーやOSが処理落ちするので上手く調整してください。
 
