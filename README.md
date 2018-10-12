@@ -18,12 +18,16 @@ RaspberryPiZeroで使用するとOTG-MIDIとMIDIを併用する事が出来る�
 次の手順でRaspberryPiのUARTを有効にしてボーレートを31250bpsに設定します。
 
 1,'uname -r'でLinuxカーネルのバージョンを確認してください。
-2,カーネルのバージョンが4.5以上なら'/boot/config.txt'に以下の3行を追加してください
+2,カーネルのバージョンが4.5以上なら`/boot/config.txt`に以下の3行を追加してください。
 
     enable_uart=1
     dtoverlay=pi3-miniuart-bt
     dtoverlay=midi-uart0
+3,バージョンが4.5未満なら`/boot/cmdline.txt`の末尾に`bcm2708.uart_clock=3000000`を、`/boot/config.txt`に以下の3行を追加してください。
 
+    enable_uart=1
+    init_uart_clock=2441406
+    init_uart_baud=38400
 また、このような(※画像は一例です)UART-MIDI変換回路をRaspberryPiに取り付けてください。
 
 ![SS](https://github.com/YoutechA320U/UART-MIDI-Pi/blob/master/UART-MIDI.png "UART-MIDI_example")
