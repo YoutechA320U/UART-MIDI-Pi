@@ -1,4 +1,4 @@
-## UART-MIDI-Pi
+# UART-MIDI-Pi
 RaspberryPi Python2.7用(Python3では確認していないです)シリアル-MIDI変換プログラム。エクスクルーシブメッセージにも対応
 
 ## 概要
@@ -15,7 +15,18 @@ RaspberryPiZeroで使用するとOTG-MIDIとMIDIを併用する事が出来る�
     pyserial,　python-rtmidi,　argparse
 
 ## 使い方
-予め[ここ](http://www.samplerbox.org/article/midiinwithrpi)を参考にRaspberryPiのUARTを有効にしてボーレートを31250bpsに設定してください。また、このような(※画像は一例です)UART-MIDI変換回路をRaspberryPiに取り付けてください。
+次の手順でRaspberryPiのUARTを有効にしてボーレートを31250bpsに設定します。
+
+1,'uname -r'でLinuxカーネルのバージョンを確認してください。
+2,カーネルのバージョンが4.5以上なら'/boot/config.txt'に以下の3行を追加してください
+
+'enable_uart=1'
+
+'dtoverlay=pi3-miniuart-bt'
+
+'dtoverlay=midi-uart0'
+
+また、このような(※画像は一例です)UART-MIDI変換回路をRaspberryPiに取り付けてください。
 
 ![SS](https://github.com/YoutechA320U/UART-MIDI-Pi/blob/master/UART-MIDI.png "UART-MIDI_example")
 
