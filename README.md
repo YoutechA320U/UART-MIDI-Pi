@@ -20,11 +20,11 @@ RaspberryPiZeroで使用するとOTG-MIDIとMIDIを併用する事が出来る�
 1,'uname -r'でLinuxカーネルのバージョンを確認してください。
 2,カーネルのバージョンが4.5以上なら'/boot/config.txt'に以下の3行を追加してください
 
-'enable_uart=1'
+`enable_uart=1`
 
-'dtoverlay=pi3-miniuart-bt'
+`dtoverlay=pi3-miniuart-bt`
 
-'dtoverlay=midi-uart0'
+`dtoverlay=midi-uart0`
 
 また、このような(※画像は一例です)UART-MIDI変換回路をRaspberryPiに取り付けてください。
 
