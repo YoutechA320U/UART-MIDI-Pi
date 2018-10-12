@@ -15,7 +15,7 @@ RaspberryPiZeroで使用するとOTG-MIDIとMIDIを併用する事が出来る�
     pyserial,　python-rtmidi,　argparse
 
 ## 使い方
-予めここ<http://www.samplerbox.org/article/midiinwithrpi>を参考にRaspberryPiのUARTを有効にしてボーレートを31250bpsに設定してください。また、このような(※画像は一例です)UART-MIDI変換回路をRaspberryPiに取り付けてください。
+予め[ここ](http://www.samplerbox.org/article/midiinwithrpi)を参考にRaspberryPiのUARTを有効にしてボーレートを31250bpsに設定してください。また、このような(※画像は一例です)UART-MIDI変換回路をRaspberryPiに取り付けてください。
 
 ![SS](https://github.com/YoutechA320U/UART-MIDI-Pi/blob/master/UART-MIDI.png "UART-MIDI_example")
 
