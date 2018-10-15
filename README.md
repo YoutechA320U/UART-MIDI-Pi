@@ -24,9 +24,8 @@ RaspberryPiZeroで使用するとOTG-MIDIとMIDIを併用する事が出来る�
     enable_uart=1
     dtoverlay=pi3-miniuart-bt
     dtoverlay=midi-uart0
-3,バージョンが4.5未満なら`/boot/cmdline.txt`の末尾に`bcm2708.uart_clock=3000000`を、`/boot/config.txt`に以下の3行を追加して再起動して下さい。
+3,バージョンが4.5未満なら`/boot/cmdline.txt`の末尾に`bcm2708.uart_clock=3000000`を、`/boot/config.txt`に以下の2行を追加して再起動して下さい。
 
-    enable_uart=1
     init_uart_clock=2441406
     init_uart_baud=38400
 また、このような(※画像は一例です)UART-MIDI変換回路をRaspberryPiに取り付けて下さい。
