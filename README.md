@@ -39,9 +39,9 @@ RaspberryPiZeroで使用するとOTG-MIDIとMIDIを併用する事が出来る�
 それぞれ実行時に拡張子の後ろに -dと引数を付けて実行すると、入出力がコンソールに表示されます。
 
 ## 備考
-MIDI端子の名前にちなんで`UART_MIDI_IN`、`UART_MIDI_OUT`という仮想MIDIポート名ですが、Linux内部的には`UART_MIDI_IN`は仮想出力、`UART_MIDI_OUT`は仮想入力ポートです。気を付けて下さい。
+MIDI端子の名前にちなんで`UART_MIDI_IN`、`UART_MIDI_OUT`という仮想MIDIポート名ですが、Linux内部的には`UART_MIDI_IN`は仮想出力、`UART_MIDI_OUT`は仮想入力ポートです。
 
-一度に大量のMIDIメッセージを受信すると処理落ちするので気をつけて下さい。また -d オプションを付けて実行すると入出力をコンソールに表示するので処理が重くなります。
+一度に大量のMIDIメッセージを受信すると処理落ちする事があります。また -d オプションを付けて実行すると入出力をコンソールに表示するので処理が重くなります。
 
 ### 参考コード・資料
  * <http://www.samplerbox.org/article/midiinwithrpi>  
