@@ -10,6 +10,8 @@ RaspberryPiZeroで使用するとOTG-MIDIとMIDIを併用する事が出来る�
     OS : Raspbian　stretch
     RaspberryPi : RaspberryPi ZeroWH,RaspberryPi 3B+
     Python : ver2.7
+    GM/GS message_test : Timidity++
+    XG/Ex message_test : NSX-39(PocketMiku)
 
 ## 必要なライブラリ
     pyserial,　python-rtmidi,　argparse
