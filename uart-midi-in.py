@@ -21,6 +21,7 @@ midiout = rtmidi.MidiOut()
 midiout.open_virtual_port("UART_MIDI_IN") # 仮想MIDIポートの名前
 ser = serial.Serial('/dev/ttyAMA0', baudrate=38400) #シリアル読み取り, ボーレート38400bps
 while True:
+  time.sleep(0000.3)        
   data1 = ord(ser.read(1)) #1バイト目
   if data1 == 247:
       midiout.send_message([data1])
