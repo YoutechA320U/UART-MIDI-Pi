@@ -31,7 +31,7 @@ while True:
       continue
   else:
       data2 = ord(ser.read(1)) #2バイト目
-      if data1 >= 192 and data1 <= 208 or data1 ==(241, 243) or data2 >= 246:
+      if 192 <= data1 <= 208 or data1 == 241 or data1 == 243 or data2 >= 246:
          midiout.send_message([data1,data2])
          if args.debug:
             print ('[{}, {}]'.format(data1, data2))
