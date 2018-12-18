@@ -1,5 +1,5 @@
 # UART-MIDI-Pi
-RaspberryPi Python2.7用(Python3では確認していないです)シリアル-MIDI変換プログラム。エクスクルーシブメッセージにも対応
+RaspberryPi Python用シリアル-MIDI変換プログラム。エクスクルーシブメッセージにも対応
 
 ## 概要
 このプログラムは、RaspberryPiのUARTでMIDIメッセージをやり取りします。入力、出力共にGM/GS/XG、その他エクスクルーシブメッセージに対応します。
@@ -26,12 +26,12 @@ RaspberryPiZeroで使用するとOTG-MIDIとMIDIを併用する事が出来る�
     enable_uart=1
     dtoverlay=pi3-miniuart-bt
     dtoverlay=midi-uart0
-3,バージョンが4.5未満なら`/boot/cmdline.txt`の末尾に`bcm2708.uart_clock=3000000`を、`/boot/config.txt`に以下の2行を追加して下さい。
+3,バージョンが4.5未満なら`/boot/cmdline.txt`の末尾に改行せずに`bcm2708.uart_clock=3000000`を、`/boot/config.txt`に以下の2行を追加して下さい。
 
     init_uart_clock=2441406
     init_uart_baud=38400
     
-4,カーネルのバージョンに関係なく`/boot/cmdline.txt`にある`console=serial0,115200`の記述を削除して再起動して下さい。
+4,カーネルのバージョンに関係なく`/boot/cmdline.txt`にある`console=serial0,115200`のような記述を削除して再起動して下さい。
 
 また、このような(※画像は一例です)UART-MIDI変換回路をRaspberryPiに取り付けて下さい。
 
